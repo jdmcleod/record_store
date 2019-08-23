@@ -1,0 +1,14 @@
+<div class="row album">
+  <div class="col-md-4"></div>
+  <div class="col-md-6">
+    <h1>Name your price!</h1>
+
+    <form action="/albums/<%= @album.id() %>/buy" method="post">
+      <div class="form-group">
+        <label for="price">Price $</label>
+        <input id="n" name="price" class="text-format" type="text">
+      </div>
+      <button type="submit" class="btn btn-success">Buy Album</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="row album">
+  <div class="col-md-3"></div>
+  <div class="col-md-4">
+    <h3>Available Records</h3>
+    <% if @albums.any? %>
+      <ul>
+        <% @albums.each do |album| %>
+          <li>
+          <img src="https://www.stickpng.com/assets/images/5856b3da4f6ae202fedf2794.png" class="album-logo">
+          <a href="/albums/<%= album.id %>"><%= album.name %></a>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>There are currently no records to display.</p>
+    <% end %>
+    <a href="/albums/new">Add a new album</a>
+    <h3>Sold Records</h3>
+    <% if @sold_albums %>
+      <ul>
+        <% @sold_albums.each do |album| %>
+          <li><a href="/albums/<%= album.id %>"><%= album.name %></a></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>There are currently no sold records to display.</p>
+    <% end %>  
+  </div>
+  <div class="col-md-4">
+    <h3>Search for available records </h3>
+    <form action="/search" method="get">
+        <input id="search" name="search" class="text-format" type="text" placeholder="search">
+        <button type="submit" class="btn btn-primary">Go!</button>
+    </form>
+  </div>
+</div>

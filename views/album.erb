@@ -1,0 +1,43 @@
+<div class="album"> 
+  <div class="row center">
+    <h2>Album Name: <%= @album.name %></h2>
+    <h3>Artist: <%= @album.artist%></h3>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+      <h3>Album Songs</h3>
+        <% if @album.songs.count>0 %>
+          <ul>
+            <% @album.songs.each do |song| %>
+              <li><a href="/albums/<%= @album.id %>/songs/<%= song.id %>"><%= song.name %></a></li>
+            <% end %>
+          </ul>
+        <% else %>
+          <p>There are no songs listed for this album yet.</p>
+        <% end %>
+        <% if !@album.is_sold? %>
+        <form action="/albums/<%= @album.id %>/buy" method="get" class="spacer">
+        <button type="submit" class="btn btn-success">Buy this album</button>
+        </form>
+        <% else %>
+        <p>This album has already been bought</p>
+        <% end %>
+        <form action="/albums/<%= @album.id %>/edit" method="get" class="spacer">
+        <button type="submit" class="btn btn-primary">Edit Album</button>
+        </form>
+    </div>
+      <h3>Add Songs</h3>
+      <div class="col-md-4 search">
+        <form action="/albums/<%= @album.id %>/songs" method="post">
+          <div class="form-group">
+            <input id="song_name" name="song_name" class="text-format" type="text" placeholder="new song">
+          </div>
+          <button type="submit" class="btn btn-primary">Add song</button>
+        </form>
+      </div>
+    </div>
+    <div class="row center">
+      <a href="/albums">Return to album list</a>
+    </div>
+</div>

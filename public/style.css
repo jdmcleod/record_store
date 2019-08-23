@@ -1,0 +1,45 @@
+.album {
+  margin: 40px;
+  padding: 20px;
+  background: rgb(144, 225, 255);
+  border-style: solid;
+  border-width: 5px;
+}
+.center {
+  text-align: center;
+}
+.container {
+  background: rgb(189, 240, 255);
+  border-style: solid;
+  border-width: 10px;
+  height: 100%;
+}
+.company-header {
+  font-family: DejaVu Sans Mono, monospace;
+  float: left;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+h3, h2 {
+  font-family: Arial;
+  text-decoration: underline;
+}
+img.logo {
+  width: 10%;
+  float: left;
+  margin-left: 30%;
+  margin-top: 10px;
+}
+img.album-logo {
+  width: 8%;
+}
+.lyrics {
+  white-space:pre;
+  background: rgb(225, 245, 255);
+  padding: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+.spacer {
+  padding-top: 20px;
+}

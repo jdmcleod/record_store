@@ -1,0 +1,24 @@
+<div class="album">
+  <div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">  
+    <h2 class="center">Update <%= @song.name %></h2>
+
+      <form action="/albums/<%= @album.id() %>/songs/<%= @song.id() %>/edit" method="post">
+        <div class="form-group">
+          <input name="_method" type="hidden" value="patch">
+          <label for="new_name">Rename song</label>
+          <input id="n" name="new_name" class="form-control" type="text" placeholder="name" value="<%=@song.name%>">
+          <input name="_method" type="hidden" value="patch">
+          <label for="songwriter" class="spacer">Change Songwriter</label>
+          <input id="n" name="songwriter" class="form-control" type="text" placeholder="songwriter" value="<%=@song.songwriter%>">
+          <input name="_method" type="hidden" value="patch">
+          <label for="lyrics" class="spacer">Add lyrics</label>
+          <textarea id="n" name="lyrics" class="form-control" type="text" placeholder="lyrics"><%=@song.lyrics%></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Update</button>
+        </form>
+        <a class="btn btn-primary" href="/albums/<%=@album.id()%>/songs/<%=@song.id()%>" style="margin-top: 20px;">Cancel</a>
+    </div>
+  </div>
+</div>
