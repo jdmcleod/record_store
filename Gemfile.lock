@@ -64,8 +64,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 2.0.1)
   capybara
   pry
   rspec
   sinatra
   sinatra-contrib
+
+BUNDLED WITH
+   2.0.2
