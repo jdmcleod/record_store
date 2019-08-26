@@ -6,7 +6,7 @@ class Song
 
   def initialize(attributes)
     attributes.each { |key, value| send "#{key}=", value }
-    attributes.key?(:id) ? @id = attributes.fetch(:id) : @id = @@total_rows+=1
+    @id = attributes.fetch(:id) { @@total_rows+=1 }
   end
 
   def ==(song_to_compare)
