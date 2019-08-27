@@ -2,7 +2,7 @@ require 'rspec'
 require 'album'
 require 'song'
 
-describe '#Album' do
+describe('#Album') do
 
   before(:each) do
     Album.clear()

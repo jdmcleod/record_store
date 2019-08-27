@@ -3,7 +3,7 @@ require 'song'
 require 'album'
 require 'pry'
 
-describe '#Song' do
+describe('#Song') do
 
   before(:each) do
     Album.clear()

@@ -26,7 +26,6 @@ class Song
   end
 
   def self.find(id)
-    puts @@songs
     @@songs[id]
   end
 

@@ -12,7 +12,7 @@
         <p>No lyrics have been posted for this song</p>
       <% end %>
       <form action="/albums/<%= @song.album.id %>/songs/<%= @song.id %>/edit" method="get">
-        <button type="submit" class="btn btn-primary">Edit Song</button>
+        <button type="submit" class="btn btn-primary">Edit song</button>
       </form>
 
       <form action="/albums/<%= @song.album.id %>/songs/<%= @song.id %>" method="post" class="spacer">
